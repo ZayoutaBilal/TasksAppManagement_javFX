@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="VBoxPane" prefHeight="72.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Line endX="474.3333740234375" endY="1.1444091796875E-5" layoutX="167.0" layoutY="58.0" startX="-143.6666717529297" startY="1.1444091796875E-5" stroke="#021c37" />
+      <ImageView fx:id="selectIcon" fitHeight="32.0" fitWidth="37.0" layoutX="22.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="idLabel" layoutX="67.0" layoutY="18.0" prefHeight="25.0" prefWidth="101.0" text="0">
+         <font>
+            <Font name="Yu Gothic UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="infoIcon" fitHeight="32.0" fitWidth="30.0" layoutX="525.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/infoIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="deleteIcon" fitHeight="32.0" fitWidth="30.0" layoutX="573.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/deleteIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="editIcon" fitHeight="32.0" fitWidth="30.0" layoutX="617.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/editIcon.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="taskText" layoutX="177.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="213.4700469970703">
+         <font>
+            <Font name="Yu Gothic UI Semibold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="statusText" layoutX="414.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="110.13668823242188">
+         <font>
+            <Font name="Yu Gothic UI Semibold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

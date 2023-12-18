@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.javaFX.tasksapp.Controllers.HomeController">
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="522.0" prefWidth="986.0">
+         <left>
+            <AnchorPane fx:id="leftPane" prefHeight="400.0" prefWidth="271.0" style="-fx-background-color: #021c37;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="getLabel" layoutX="42.0" layoutY="91.0" mouseTransparent="true" prefHeight="18.0" prefWidth="103.0" text="Get A Task" textFill="#c88d27">
+                     <font>
+                        <Font name="Cooper Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <GridPane fx:id="gridPaneButton" layoutX="42.0" layoutY="231.0" prefHeight="171.0" prefWidth="103.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="CompletedButton" layoutX="10.0" layoutY="18.0" mnemonicParsing="false" onAction="#CompletedButtonPressed" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #c88d27;" text="Complete" textFill="WHITE" />
+                        <Button fx:id="UncompletedButton" layoutX="10.0" layoutY="18.0" mnemonicParsing="false" onAction="#UncompletedButtonPressed" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #c88d27;" text="Incomplete" textFill="WHITE" GridPane.rowIndex="1" />
+                        <Button fx:id="UpcomingButton" layoutX="10.0" layoutY="18.0" mnemonicParsing="false" onAction="#UpcomingButtonPressed" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #c88d27;" text="Upcoming" textFill="WHITE" GridPane.rowIndex="2" />
+                        <Button fx:id="CanceledButton" mnemonicParsing="false" onAction="#CanceledButtonPressed" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #c88d27;" text="Canceled" textFill="WHITE" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <Label fx:id="tasksLabel" layoutX="42.0" layoutY="186.0" prefHeight="18.0" prefWidth="67.0" text="Tasks" textFill="#c88d27" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="homeIcon" fitHeight="20.0" fitWidth="23.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/home.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="addIcon" fitHeight="20.0" fitWidth="23.0" layoutX="229.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/plusIcon.png" />
+                     </image>
+                  </ImageView>
+                  <DatePicker fx:id="datepickerSearch" layoutX="42.0" layoutY="128.0" />
+                  <ImageView fitHeight="20.0" fitWidth="23.0" layoutX="229.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" fx:id="xIcon">
+                     <image>
+                        <Image url="@../imgs/exitIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="centerPane" prefHeight="448.0" prefWidth="517.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fx:id="taskScrollPane" layoutX="10.0" layoutY="65.0" prefHeight="340.0" prefWidth="695.0" style="-fx-border-color: #c88d27;">
+                     <content>
+                        <VBox fx:id="tasksVBox" prefHeight="336.0" prefWidth="673.0" />
+                     </content></ScrollPane>
+                  <Label fx:id="ForLabel" layoutX="25.0" layoutY="29.0" prefHeight="29.0" prefWidth="211.0" text="For" textFill="#c88d27">
+                     <font>
+                        <Font name="Cooper Black" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label id="labelmessage" fx:id="labelmessage" layoutX="286.0" layoutY="29.0" prefHeight="29.0" prefWidth="267.0" textFill="#5e5959">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="rotateIcone" fitHeight="27.0" fitWidth="28.0" layoutX="665.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/rotateIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="removeAllIcon" fitHeight="27.0" fitWidth="28.0" layoutX="613.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/deleteIcon.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </center>
+         <top>
+            <AnchorPane fx:id="topPane" prefHeight="74.0" prefWidth="655.0" style="-fx-background-color: #021c37;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="welcomeLabel" layoutX="83.0" layoutY="10.0" prefHeight="53.0" prefWidth="657.0" text="Welcome to done Application for tasks management" textFill="#c88d27">
+                     <font>
+                        <Font name="Cooper Black" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="exitIcon" fitHeight="20.0" fitWidth="23.0" layoutX="952.0" layoutY="14.0" onMouseClicked="#exitApp" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/exitIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
